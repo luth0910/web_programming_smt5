@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Teknologi</title>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 20px 0 20px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;    
+        }
+
+        li {
+            padding: 10px;
+            list-style-type: none;
+        }
+        
+        section {
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+        }
+
+        footer p, li a, nav h1 {
+            color: white;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #b0b0b0;
+        }
+        
+    </style>
+</head>
+<body style="font-size: 1.2em;"> 
+    <header>
+        <nav>
+        <h1>Website Teknologi</h1>
+        <ul>
+            <li><a href="#pendahuluan">Pendahuluan</a></li>
+            <li><a href="#gambar">Gambar</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+            <li>
+            <form action="https://www.google.com/search" target="_blank">
+                <input type="text" name="q" placeholder="search on google">
+                <button type="submit">Google Search</button>
+            </form>
+            </li>
+        </ul>
+        </nav>
+    </header>
+
+    
+    <section id="pendahuluan" style="text-align: center;">
+        <h1>Selamat Datang di Website Teknologi</h1>
+        <p>
+            <strong>Teknologi</strong> adalah keseluruhan sarana untuk menyediakan barang-barang yang diperlukan bagi kelangsungan dan kenyamanan hidup manusia.
+        </p>
+        <p>
+            Penggunaan teknologi oleh manusia dimulai dengan pengubahan sumber daya alam menjadi alat-alat sederhana. Penemuan prasejarah tentang kemampuan mengendalikan api telah menaikkan ketersediaan sumber-sumber pangan, sedangkan penciptaan roda telah membantu manusia dalam bepergian dan mengendalikan lingkungan mereka. Perkembangan teknologi terbaru, termasuk di antaranya mesin cetak, telepon, dan Internet, telah memperkecil hambatan fisik terhadap komunikasi dan memungkinkan manusia untuk berinteraksi secara bebas dalam skala global. Tetapi, tidak semua teknologi digunakan untuk tujuan damai. Pengembangan senjata penghancur yang semakin hebat telah berlangsung sepanjang sejarah dari pentungan sampai senjata nuklir.
+        </p>
+        <p>
+            Teknologi telah memengaruhi masyarakat dan sekelilingnya dalam banyak cara. Di banyak kelompok masyarakat, teknologi telah membantu memperbaiki ekonomi (termasuk ekonomi global masa kini) dan telah memungkinkan bertambahnya kaum senggang. Banyak proses teknologi menghasilkan produk sampingan yang tidak dikehendaki yang disebut pencemar dan menguras sumber daya alam, merugikan, dan merusak Bumi dan lingkungannya. Berbagai macam penerapan teknologi telah memengaruhi nilai suatu masyarakat dan teknologi baru sering kali mencuatkan pertanyaan-pertanyaan etika baru. Sebagai contoh: meluasnya gagasan tentang efisiensi dalam konteks produktivitas manusia, suatu istilah yang pada awalnya hanya menyangkut permesinan. Contoh lainnya adalah tantangan norma-norma tradisional.
+        </p>
+        <p>
+            Bahwa keadaan ini membahayakan lingkungan dan mengucilkan manusia. Penyokong paham-paham seperti transhumanisme dan tekno-progresivisme memandang proses teknologi yang berkelanjutan sebagai hal yang menguntungkan bagi masyarakat dan kondisi manusia. Tentu saja, paling sedikit hingga saat ini diyakini bahwa pengembangan teknologi hanya terbatas bagi umat manusia, tetapi kajian-kajian ilmiah terbaru mengisyaratkan bahwa primata lainnya dan komunitas lumba-lumba tertentu telah mengembangkan alat-alat sederhana dan belajar untuk mewariskan pengetahuan mereka kepada keturunan mereka.
+        </p>
+    </section>
+    
+    <!-- Perhaps it's not working because the flexbox -->
+    <hr>
+
+    <section id="gambar">
+        <!-- Add Images -->
+        <h1>Gambar</h1>
+        <div align= "center">
+            <img src="https://asset.kompas.com/crops/xjcNbFyx4Sl51KJ4XHYb-lMUCdM=/20x0:770x500/750x500/data/photo/2023/02/07/63e226d5c74bb.jpg" alt="gambar1" width="400" height="400"> 
+            <img src="https://cdn0-production-images-kly.akamaized.net/uQXnED7MRKPRG9eO3Be-Yk8ct34=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1232307/original/061802900_1463129616-Perusahaan_IT.jpg" alt="Gambar2" width="400" height="400">
+            <img src="https://www.constructionplusasia.com/wp-content/uploads/2020/10/Bannafarsai_Stock-Drone-shutterstock_1184307793-810x540.jpg" alt="gambar3" width="400" height="400">
+            <img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2020/08/14/4285300588.jpg" alt="Gambar4" height="400" width="400">
+        </div>
+    </section>
+
+    <section id="video">
+        <h1>Video</h1>
+        <!-- Add Videos -->
+        <div align="center">
+            <iframe width="700" height="500" src="https://www.youtube.com/embed/DeDNyIFZFr4?si=z0M3VEGPdxOjBTpC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <!-- Add Contact Form -->
+        <form action="#" method="#">
+            <fieldset>
+            <legend><h1>Contact Us</h1></legend>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="your name..." />
+            </p>
+            <p>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="subject..." />
+            </p>
+            <p>
+                <label>Email:</label>
+                <input type="email" id="subject" name="email" placeholder="your email..." />
+            </p>
+            <p>
+                <input type="submit" id="subject" name="submit" value="Send" />
+            </p>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        <p>Made by Group3 | Hans - Luthfi - Fadhli</p>
+</footer>
+</body>
+</html>
