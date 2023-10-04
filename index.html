@@ -1,189 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Teknologi</title>
-
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-            position: relative;
-        }
+      * {
+        scroll-behavior: smooth;
+      }
 
-        nav {
-            background-color: #333;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 0 20px 0 20px;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        position: relative;
+      }
 
-        ul {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+      .logo {
+        width: 250px;
+      }
 
-        li {
-            padding: 10px;
-            list-style-type: none;
-        }
+      .logo span {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 5s infinite ease-out;
+      }
 
-        section {
-            padding: 10px;
-        }
+      #intro p {
+        font-size: 1.3em;
+      }
 
-        footer {
-            background-color: #333;
-            text-align: center;
-        }
+      @keyframes typing {
+        from {width: 0;} 
+        to {width: 100%;}
+      }
 
-        footer p,
-        li a,
-        nav h1 {
-            color: white;
-            text-decoration: none;
-        }
+      nav {
+        background-color: #333;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px 0 20px;
+      }
 
-        li a:hover {
-            color: #b0b0b0;
-        }
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      li {
+        padding: 10px;
+        list-style-type: none;
+      }
+
+      section {
+        padding: 10px;
+      }
+
+      footer {
+        background-color: #333;
+        text-align: center;
+      }
+
+      footer p,
+      li a,
+      nav h1 {
+        color: white;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        color: #b0b0b0;
+      }
+
+      section#image {
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+
+      section#image h1 {
+        font-size: 2em;
+      }
+
+      section img {
+        margin: 20px;
+        border: 5px solid white;
+        border-radius: 10px;
+        transition: transform 0.2s ease;
+      }
+
+      section img:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 100px;
+        color: white;
+      }
+
+      .content {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      .form-input {
+        /* style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #ccc; border-radius: 25px" */
+        width: 90%;
+        padding: 10px;
+        padding: 10px;
+        border-radius: 25px;
+        border: 2px solid #ccc;
+        margin: 5px 0;
+      }
+
+      button{
+        /* style="border: none; border-radius: 25px; padding: 10px 20px; background-color: #4caf50; color: white; cursor: pointer" */
+        background-color: #4caf50;
+        cursor: pointer;
+        border-radius: 25px;
+        padding: 10px 20px;
+        color: #fff;
+        border: 1px solid #000;
+      }
+
+      button:hover {
+        background-color: #38833b;
+      }
     </style>
-</head>
+  </head>
 
-<body style="font-size: 1.2em;">
+  <body style="font-size: 1.2em">
 
-    <video src="./bg.mp4" autoplay muted type="video/mp4"
-        style="min-width: 100%;;z-index: 11;position: absolute;opacity: .2;bottom: 0;top: 0;">
-    </video>
+    <audio src="welcomeaudio.mp4" autoplay></audio>
 
     <header>
-        <nav>
-            <h1>Website Teknologi</h1>
-            <ul>
-                <li><a href="#intro">Pendahuluan</a></li>
-                <li><a href="#image">Gambar</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#contact">Kontak</a></li>
-                <li>
-                    <form action="https://www.google.com/search" target="_blank">
-                        <input type="text" name="q" placeholder="search on google">
-                        <button type="submit">Google Search</button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <h1 class="logo" style="display: flex;align-items: center;">
+          <span>Website Teknologi</span>
+        </h1>
+        <ul>
+          <li><a href="#intro">Pendahuluan</a></li>
+          <li><a href="#image">Gambar</a></li>
+          <li><a href="#video">Video</a></li>
+          <li><a href="#contact">Kontak</a></li>
+          <li>
+            <form action="https://www.google.com/search" method="GET" target="_blank" style="display: flex; align-items: center">
+              <input type="text" name="q" placeholder="Search on Google" style="border: 2px solid #ccc; border-radius: 25px; padding: 10px; margin-right: 10px" />
+              <button>Search</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-
-    <section id="intro" style="text-align: center;">
-        <h1>Selamat Datang di Website Teknologi</h1>
-        <p>
-            <strong>Teknologi</strong> adalah keseluruhan sarana untuk menyediakan barang-barang yang diperlukan bagi
-            kelangsungan dan kenyamanan hidup manusia.
-        </p>
-        <p>
-            Penggunaan teknologi oleh manusia dimulai dengan pengubahan sumber daya alam menjadi alat-alat sederhana.
-            Penemuan prasejarah tentang kemampuan mengendalikan api telah menaikkan ketersediaan sumber-sumber pangan,
-            sedangkan penciptaan roda telah membantu manusia dalam bepergian dan mengendalikan lingkungan mereka.
-            Perkembangan teknologi terbaru, termasuk di antaranya mesin cetak, telepon, dan Internet, telah memperkecil
-            hambatan fisik terhadap komunikasi dan memungkinkan manusia untuk berinteraksi secara bebas dalam skala
-            global. Tetapi, tidak semua teknologi digunakan untuk tujuan damai. Pengembangan senjata penghancur yang
-            semakin hebat telah berlangsung sepanjang sejarah dari pentungan sampai senjata nuklir.
-        </p>
-        <p>
-            Teknologi telah memengaruhi masyarakat dan sekelilingnya dalam banyak cara. Di banyak kelompok masyarakat,
-            teknologi telah membantu memperbaiki ekonomi (termasuk ekonomi global masa kini) dan telah memungkinkan
-            bertambahnya kaum senggang. Banyak proses teknologi menghasilkan produk sampingan yang tidak dikehendaki
-            yang disebut pencemar dan menguras sumber daya alam, merugikan, dan merusak Bumi dan lingkungannya. Berbagai
-            macam penerapan teknologi telah memengaruhi nilai suatu masyarakat dan teknologi baru sering kali mencuatkan
-            pertanyaan-pertanyaan etika baru. Sebagai contoh: meluasnya gagasan tentang efisiensi dalam konteks
-            produktivitas manusia, suatu istilah yang pada awalnya hanya menyangkut permesinan. Contoh lainnya adalah
-            tantangan norma-norma tradisional.
-        </p>
-        <p>
-            Bahwa keadaan ini membahayakan lingkungan dan mengucilkan manusia. Penyokong paham-paham seperti
-            transhumanisme dan tekno-progresivisme memandang proses teknologi yang berkelanjutan sebagai hal yang
-            menguntungkan bagi masyarakat dan kondisi manusia. Tentu saja, paling sedikit hingga saat ini diyakini bahwa
-            pengembangan teknologi hanya terbatas bagi umat manusia, tetapi kajian-kajian ilmiah terbaru mengisyaratkan
-            bahwa primata lainnya dan komunitas lumba-lumba tertentu telah mengembangkan alat-alat sederhana dan belajar
-            untuk mewariskan pengetahuan mereka kepada keturunan mereka.
-        </p>
-        <p>
-            Penggunaan istilah 'teknologi' (bahasa Inggris: technology) telah berubah secara signifikan lebih dari 200 tahun terakhir. Sebelum abad ke-20, istilah ini tidaklah lazim dalam bahasa Inggris, dan biasanya merujuk pada penggambaran atau pengkajian seni terapan.Istilah ini sering kali dihubungkan dengan pendidikan teknik, seperti di Institut Teknologi Massachusetts (didirikan pada tahun 1861).Istilah technology mulai menonjol pada abad ke-20 seiring dengan bergulirnya Revolusi Industri Kedua. Pengertian technology berubah pada permulaan abad ke-20 ketika para ilmuwan sosial Amerika, dimulai oleh Thorstein Veblen, menerjemahkan gagasan-gagasan dari konsep Jerman, Technik, menjadi technology. Dalam bahasa Jerman dan bahasa-bahasa Eropa lainnya, perbedaan hadir di antara Technik dan Technologie yang saat itu justru nihil dalam bahasa Inggris, karena kedua istilah itu biasa diterjemahkan sebagai technology.
-        </p>
-        <p>
-            Pada dasawarsa 1930-an, technology tidak hanya merujuk pada 'pengkajian' seni-seni industri, tetapi juga pada seni-seni industri itu sendiri. Pada tahun 1937, seorang sosiolog Amerika, Read Bain, menulis bahwa technology includes all tools, machines, utensils, weapons, instruments, housing, clothing, communicating and transporting devices and the skills by which we produce and use them ("teknologi meliputi semua alat, mesin, aparat, perkakas, senjata, perumahan, pakaian, peranti pengangkut/pemindah dan pengomunikasi, dan keterampilan yang memungkinkan kita menghasilkan semua itu").
-        </p>
+    <section id="intro" style="text-align: center;height: 90vh;padding: 0 10px;margin: 0;">
+      <video src="bg.mp4" autoplay muted loop style="opacity: .2;z-index: -100;position: absolute;left: 0;width: 100%;"></video>
+      <h1 style="padding-top: 180px;">Selamat Datang di Dunia Teknologi!</h1>
+      <p><strong>Teknologi</strong> adalah keseluruhan sarana untuk menyediakan barang-barang yang diperlukan bagi kelangsungan dan kenyamanan hidup manusia.</p>
+      <p>
+        Penggunaan teknologi oleh manusia dimulai dengan pengubahan sumber daya alam menjadi alat-alat sederhana. Penemuan prasejarah tentang kemampuan mengendalikan api telah menaikkan ketersediaan sumber-sumber pangan, sedangkan
+        penciptaan roda telah membantu manusia dalam bepergian dan mengendalikan lingkungan mereka. Perkembangan teknologi terbaru, termasuk di antaranya mesin cetak, telepon, dan Internet, telah memperkecil hambatan fisik terhadap
+        komunikasi dan memungkinkan manusia untuk berinteraksi secara bebas dalam skala global. Tetapi, tidak semua teknologi digunakan untuk tujuan damai. Pengembangan senjata penghancur yang semakin hebat telah berlangsung sepanjang
+        sejarah dari pentungan sampai senjata nuklir.
+      </p>
     </section>
 
-    <!-- Perhaps it's not working because the flexbox -->
-    <hr>
-
     <section id="image">
-        <!-- Add Images -->
-        <h1>Gambar</h1>
-        <div align="center">
-            <img src="https://asset.kompas.com/crops/xjcNbFyx4Sl51KJ4XHYb-lMUCdM=/20x0:770x500/750x500/data/photo/2023/02/07/63e226d5c74bb.jpg"
-                alt="gambar1" width="30%" height="15%">
-            <img src="https://cdn0-production-images-kly.akamaized.net/uQXnED7MRKPRG9eO3Be-Yk8ct34=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1232307/original/061802900_1463129616-Perusahaan_IT.jpg"
-                alt="Gambar2" width="20%" height="10%">
-            <img src="https://www.constructionplusasia.com/wp-content/uploads/2020/10/Bannafarsai_Stock-Drone-shutterstock_1184307793-810x540.jpg"
-                alt="gambar3" width="400" height="400">
-            <img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2020/08/14/4285300588.jpg" alt="Gambar4" width="30%" height="15%"
-                width="400">
-        </div>
+      <!-- Add Images -->
+      <h1 style="text-align: center;">Gambar</h1>
+      <hr />
+      <div align="center">
+        <img src="https://asset.kompas.com/crops/xjcNbFyx4Sl51KJ4XHYb-lMUCdM=/20x0:770x500/750x500/data/photo/2023/02/07/63e226d5c74bb.jpg" alt="gambar1" width="30%" height="15%" />
+        <img
+          src="https://cdn0-production-images-kly.akamaized.net/uQXnED7MRKPRG9eO3Be-Yk8ct34=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1232307/original/061802900_1463129616-Perusahaan_IT.jpg"
+          alt="Gambar2"
+          width="35%"
+          height="17%"
+        />
+        <img src="https://www.constructionplusasia.com/wp-content/uploads/2020/10/Bannafarsai_Stock-Drone-shutterstock_1184307793-810x540.jpg" alt="gambar3" width="30%" height="15%" />
+        <img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2020/08/14/4285300588.jpg" alt="Gambar4" width="30%" height="15%" />
+      </div>
     </section>
 
     <section id="video">
-        <h1>Video</h1>
-        <!-- Add Videos -->
-        <div align="center">
-            <iframe 
-                width="700" 
-                height="500" src="https://www.youtube.com/embed/DeDNyIFZFr4?si=z0M3VEGPdxOjBTpC"
-                title="YouTube video player" 
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
+      <h1 style="text-align: center">Video</h1>
+      <hr />
+      <!-- Add Videos -->
+      <div style="margin: 2% 0" align="center">
+        <iframe
+          width="700"
+          height="500"
+          src="https://www.youtube.com/embed/DeDNyIFZFr4?si=z0M3VEGPdxOjBTpC"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </section>
 
-    <section id="contact">
-        <!-- Add Contact Form -->
-        <form action="#" method="#">
-            <fieldset>
-                <legend>
-                    <h1>Contact Us</h1>
-                </legend>
-                <p>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="your name..." />
-                </p>
-                <p>
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" placeholder="subject..." />
-                </p>
-                <p>
-                    <label>Email:</label>
-                    <input type="email" id="subject" name="email" placeholder="your email..." />
-                </p>
-                <p>
-                    <input type="submit" id="subject" name="submit" value="Send" />
-                </p>
-            </fieldset>
+    <section id="contact" style="background-color: #f9f9f9; padding: 20px; text-align: center">
+      <div class="contact-container" style="border: 1px solid black;border-radius: 10px; padding: 0 20px 20px 20px; max-width: 500px; margin: 0 auto">
+        <h1 style="font-size: 1.5em">Kontak Kami</h1>
+
+        <form action="#" method="#" style="text-align: left">
+          <table style="width: 100%">
+            <tr>
+              <td><label for="name" style="display: block; margin-bottom: 10px">Name</label></td>
+              <td><input class="form-input" type="text" id="name" name="name" placeholder="Your name..." required /></td>
+            </tr>
+            <tr>
+              <td><label for="subject" style="display: block; margin-bottom: 10px">Subject</label></td>
+              <td><input class="form-input" type="text" id="subject" name="subject" placeholder="Subject..." required /></td>
+            </tr>
+            <tr>
+              <td><label for="email" style="display: block; margin-bottom: 10px">Email</label></td>
+              <td><input class="form-input" type="email" id="email" name="email" placeholder="Your email..." required /></td>
+            </tr>
+            <tr>
+              <td><label for="message" style="display: block; margin-bottom: 10px">Message</label></td>
+              <td><textarea class="form-input" id="message" name="message" placeholder="Your message..." rows="4" required></textarea></td>
+            </tr>
+          </table>
+
+          <button type="submit" style="width: 100%;">Send</button>
         </form>
-    </section>
+      </div>
+    </section> 
 
     <footer>
-        <p>Made by Group3 | Hans - Luthfi - Fadhli</p>
+      <p>Made by Group3 | 
+        <span style="color: #d37171">Fadhli</span> - 
+        <span style="color: #8dd789">Hans</span> - 
+        <span style="color: #befff7">Luthfi</span>
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>
