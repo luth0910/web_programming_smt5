@@ -109,7 +109,6 @@
       }
 
       .form-input {
-        /* style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid #ccc; border-radius: 25px" */
         width: 90%;
         padding: 10px;
         padding: 10px;
@@ -119,7 +118,6 @@
       }
 
       button{
-        /* style="border: none; border-radius: 25px; padding: 10px 20px; background-color: #4caf50; color: white; cursor: pointer" */
         background-color: #4caf50;
         cursor: pointer;
         border-radius: 25px;
@@ -136,21 +134,19 @@
 
   <body style="font-size: 1.2em">
 
-    <audio src="welcomeaudio.mp4" autoplay></audio>
-
     <header>
       <nav>
         <h1 class="logo" style="display: flex;align-items: center;">
-          <span>Website Teknologi</span>
+          <span><a style="text-decoration: none;color: #fff;" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Website Teknologi</a></span>
         </h1>
         <ul>
-          <li><a href="#intro">Pendahuluan</a></li>
+          <li><a href="#">Pendahuluan</a></li>
           <li><a href="#image">Gambar</a></li>
           <li><a href="#video">Video</a></li>
           <li><a href="#contact">Kontak</a></li>
           <li>
             <form action="https://www.google.com/search" method="GET" target="_blank" style="display: flex; align-items: center">
-              <input type="text" name="q" placeholder="Search on Google" style="border: 2px solid #ccc; border-radius: 25px; padding: 10px; margin-right: 10px" />
+              <input type="text" name="q" placeholder="Search on Google" style="border: 2px solid #ccc; border-radius: 25px; padding: 10px; margin-right: 10px" required/>
               <button>Search</button>
             </form>
           </li>
@@ -220,7 +216,7 @@
             </tr>
             <tr>
               <td><label for="email" style="display: block; margin-bottom: 10px">Email</label></td>
-              <td><input class="form-input" type="email" id="email" name="email" placeholder="Your email..." required /></td>
+              <td><input class"form-input" type="email" id="email" name="email" placeholder="Your email..." required /></td>
             </tr>
             <tr>
               <td><label for="message" style="display: block; margin-bottom: 10px">Message</label></td>
@@ -234,11 +230,15 @@
     </section> 
 
     <footer>
-      <p>Made by Group3 | 
-        <span style="color: #d37171">Fadhli</span> - 
-        <span style="color: #8dd789">Hans</span> - 
-        <span style="color: #befff7">Luthfi</span>
+      <p>Made by Group3 |
+        <code>
+            <span style="color: #ca6b6b">Fadhli</span> - 
+            <span style="color: #8dd789">Hans</span> - 
+            <span style="color: #befff7">Luthfi</span>
+        </code> 
       </p>
     </footer>
+
+    <audio src="welcomeaudio.mp4" autoplay ></audio>
   </body>
 </html>
